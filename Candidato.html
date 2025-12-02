@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Role Play - Coordenador Comercial | Instruções para o Candidato</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1e3a5f;
+            --secondary: #2d5986;
+            --accent: #f97316;
+            --success: #10b981;
+            --bg: #f8fafc;
+            --surface: #ffffff;
+            --text: #1e293b;
+            --text-light: #64748b;
+            --border: #e2e8f0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 3rem 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .header h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .header-subtitle {
+            font-size: 1.125rem;
+            opacity: 0.9;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+        }
+
+        .welcome-box {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-top: 1.5rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .intro-card {
+            background: var(--surface);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            border: 1px solid var(--border);
+            border-left: 5px solid var(--accent);
+        }
+
+        .intro-card h2 {
+            font-family: 'Outfit', sans-serif;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .block {
+            background: var(--surface);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            border: 1px solid var(--border);
+        }
+
+        .block-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 3px solid var(--primary);
+        }
+
+        .block-number {
+            background: var(--primary);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .block-title h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .duration {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .objective {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border-left: 4px solid var(--accent);
+            padding: 1.25rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+
+        .scenario-box {
+            background: #f0f9ff;
+            border: 2px solid #3b82f6;
+            padding: 1.75rem;
+            border-radius: 12px;
+            margin: 1.5rem 0;
+        }
+
+        .scenario-box h3 {
+            color: var(--primary);
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .scenario-content {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 3px solid #3b82f6;
+            line-height: 1.8;
+        }
+
+        .scenario-content strong {
+            color: var(--primary);
+            display: block;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .scenario-content ul {
+            margin-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .scenario-content li {
+            margin: 0.5rem 0;
+        }
+
+        .task-list {
+            background: #f0fdf4;
+            border-left: 4px solid var(--success);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+
+        .task-list h4 {
+            color: var(--success);
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .task-list ol {
+            margin-left: 1.5rem;
+        }
+
+        .task-list li {
+            margin: 1rem 0;
+            line-height: 1.7;
+        }
+
+        .task-list li strong {
+            color: var(--primary);
+        }
+
+        .video-section {
+            background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+            color: white;
+            text-align: center;
+        }
+
+        .video-section h3 {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .video-section p {
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+        }
+
+        .video-link {
+            background: white;
+            color: var(--primary);
+            padding: 1.25rem 2rem;
+            border-radius: 10px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .video-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+
+        .video-icon {
+            font-size: 1.5rem;
+        }
+
+        .tip-box {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+
+        .tip-box h4 {
+            color: #92400e;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+        }
+
+        .key-points {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .key-point {
+            background: var(--bg);
+            padding: 1.25rem;
+            border-radius: 8px;
+            border-left: 3px solid var(--accent);
+        }
+
+        .key-point-title {
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .footer {
+            background: var(--surface);
+            border-top: 1px solid var(--border);
+            padding: 2rem;
+            margin-top: 3rem;
+            text-align: center;
+            color: var(--text-light);
+        }
+
+        @media print {
+            .header {
+                background: var(--primary);
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, #fef3c7 0%, #fde68a 100%);
+            padding: 0.15rem 0.4rem;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🎯 Role Play - Coordenador Comercial</h1>
+        <p class="header-subtitle">Instruções para o Candidato | HupData</p>
+        <div class="welcome-box">
+            <p style="font-size: 1.1rem; line-height: 1.7;">
+                Bem-vindo(a)! Este documento contém todas as informações sobre o role play que você irá realizar. 
+                Leia atentamente cada bloco e prepare-se para demonstrar suas habilidades de coordenação, planejamento e vendas consultivas.
+            </p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="intro-card">
+            <h2>📋 Visão Geral do Processo</h2>
+            <p style="margin-bottom: 1rem;">O role play está dividido em <strong>3 blocos</strong> que avaliarão diferentes competências:</p>
+            <div class="key-points">
+                <div class="key-point">
+                    <div class="key-point-title">Bloco 1 - Planejamento</div>
+                    <p>15 minutos para apresentar como você estruturaria os primeiros dias no cargo</p>
+                </div>
+                <div class="key-point">
+                    <div class="key-point-title">Bloco 2 - Coordenação</div>
+                    <p>25 minutos de simulações onde você coordenará membros do time</p>
+                </div>
+                <div class="key-point">
+                    <div class="key-point-title">Bloco 3 - Pitch</div>
+                    <p>20 minutos para apresentar solução consultiva a um cliente</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- BLOCO 1 -->
+        <div class="block">
+            <div class="block-header">
+                <div class="block-number">1</div>
+                <div class="block-title">
+                    <h2>Planejamento Estratégico</h2>
+                    <p class="duration">⏱️ Tempo disponível: 15 minutos</p>
+                </div>
+            </div>
+
+            <div class="objective">
+                <strong>🎯 Seu objetivo:</strong> Demonstrar capacidade de organização, priorização e criação de plano de ação executável
+            </div>
+
+            <div class="scenario-box">
+                <h3>📄 Cenário</h3>
+                <div class="scenario-content">
+                    Você acabou de assumir como <strong>Coordenador Comercial</strong> da HupData. 
+                    Hoje é segunda-feira, 9h da manhã, e você precisa organizar o time para entregar resultados ainda neste mês.
+
+                    <strong>ESTRUTURA DO TIME:</strong>
+                    <ul>
+                        <li>2 SDRs (Sales Development Representatives)</li>
+                        <li>1 Inside Sales</li>
+                        <li>1 Analista Comercial Júnior (apoio administrativo)</li>
+                    </ul>
+
+                    <strong>SITUAÇÃO ATUAL:</strong>
+                    <ul>
+                        <li>80 leads qualificados entraram nos últimos 10 dias (ainda não trabalhados)</li>
+                        <li>O time está desorganizado e sem priorização clara</li>
+                        <li>Não há rotina de acompanhamento estabelecida</li>
+                        <li>CRM está incompleto</li>
+                        <li>Follow-ups estão atrasados</li>
+                    </ul>
+
+                    <strong>META DO MÊS:</strong>
+                    <ul>
+                        <li>Fechar R$ 120.000 em novos contratos</li>
+                        <li>Criar previsibilidade de pipeline no Pipedrive</li>
+                    </ul>
+
+                    <div style="background: #fee2e2; padding: 1rem; border-radius: 6px; margin-top: 1rem; border-left: 3px solid #ef4444;">
+                        <strong style="color: #991b1b;">⚠️ DESAFIO: Você tem 7 dias para organizar tudo!</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="task-list">
+                <h4>✅ O que você deve apresentar (máximo 10 minutos):</h4>
+                <ol>
+                    <li>
+                        <strong>Plano dos primeiros 7 dias:</strong>
+                        <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                            <li>Como você organizaria o time?</li>
+                            <li>Quais rituais e reuniões implementaria?</li>
+                            <li>Como priorizaria os 80 leads?</li>
+                            <li>Como eliminaria os impedimentos operacionais?</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Métricas e controle:</strong>
+                        <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                            <li>Quais indicadores você acompanharia diariamente?</li>
+                            <li>Quais sinais de alerta monitoraria?</li>
+                            <li>Como garantiria previsibilidade de resultados?</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Comunicação com o time:</strong>
+                        <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                            <li>Como transmitiria urgência sem gerar caos?</li>
+                            <li>Como garantiria foco e execução?</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="tip-box">
+                <h4>💡 Dica</h4>
+                <p>Seja específico e prático. Evite respostas genéricas. Defina prazos, responsáveis e métricas concretas.</p>
+            </div>
+        </div>
+
+        <!-- BLOCO 2 -->
+        <div class="block">
+            <div class="block-header">
+                <div class="block-number">2</div>
+                <div class="block-title">
+                    <h2>Coordenação de Time</h2>
+                    <p class="duration">⏱️ Tempo disponível: 25 minutos</p>
+                </div>
+            </div>
+
+            <div class="objective">
+                <strong>🎯 Seu objetivo:</strong> Demonstrar liderança, diagnóstico rápido e capacidade de remover impedimentos
+            </div>
+
+            <p style="margin-bottom: 1.5rem;">Este bloco terá <strong>duas simulações</strong> onde você precisará coordenar membros do seu time:</p>
+
+            <div class="scenario-box">
+                <h3>🎭 Simulação A - Coordenando um SDR (12 minutos)</h3>
+                <div class="scenario-content">
+                    <strong>Situação:</strong>
+                    <p>Um SDR do seu time está perdido, sem saber priorizar as demandas. Ele virá até você pedindo ajuda e direcionamento.</p>
+
+                    <strong>O que você deve fazer:</strong>
+                    <ul>
+                        <li>Diagnosticar rapidamente a situação</li>
+                        <li>Definir prioridades claras</li>
+                        <li>Remover impedimentos operacionais</li>
+                        <li>Dar diretrizes práticas e executáveis</li>
+                        <li>Estabelecer plano de ação para as próximas 24 horas</li>
+                    </ul>
+
+                    <div style="background: #dbeafe; padding: 1rem; border-radius: 6px; margin-top: 1rem;">
+                        <strong style="color: var(--primary);">💬 Prepare-se para:</strong> O entrevistador fará o papel do SDR e apresentará os problemas. Você deverá conduzir a conversa como coordenador.
+                    </div>
+                </div>
+            </div>
+
+            <div class="scenario-box">
+                <h3>🎭 Simulação B - Coordenando um Executivo de Contas (13 minutos)</h3>
+                <div class="scenario-content">
+                    <strong>Situação:</strong>
+                    <p>Um Executivo de Contas sênior tem um deal grande travado e precisa de sua orientação estratégica sobre como proceder.</p>
+
+                    <strong>O que você deve fazer:</strong>
+                    <ul>
+                        <li>Fazer perguntas qualificadoras inteligentes</li>
+                        <li>Avaliar viabilidade do negócio</li>
+                        <li>Decidir se vale continuar investindo tempo</li>
+                        <li>Remover impedimentos estratégicos</li>
+                        <li>Definir previsão realista</li>
+                        <li>Estabelecer plano claro para as próximas 48 horas</li>
+                    </ul>
+
+                    <div style="background: #dbeafe; padding: 1rem; border-radius: 6px; margin-top: 1rem;">
+                        <strong style="color: var(--primary);">💬 Prepare-se para:</strong> Nesta simulação você precisa demonstrar influência e liderança madura. O AE é sênior, então sua abordagem deve ser consultiva e respeitosa.
+                    </div>
+                </div>
+            </div>
+
+            <div class="tip-box">
+                <h4>💡 Dicas para as Simulações</h4>
+                <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                    <li><strong>Faça perguntas antes de dar soluções</strong> - Entenda bem o problema primeiro</li>
+                    <li><strong>Seja específico</strong> - Evite direcionamentos vagos como "foca no importante"</li>
+                    <li><strong>Tome decisões</strong> - Não apenas recomende, decida</li>
+                    <li><strong>Transmita segurança</strong> - O time precisa sentir que está sendo bem guiado</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- BLOCO 3 -->
+        <div class="block">
+            <div class="block-header">
+                <div class="block-number">3</div>
+                <div class="block-title">
+                    <h2>Pitch Consultivo</h2>
+                    <p class="duration">⏱️ Tempo disponível: 20 minutos</p>
+                </div>
+            </div>
+
+            <div class="objective">
+                <strong>🎯 Seu objetivo:</strong> Demonstrar entendimento de demanda e capacidade de propor solução consultiva
+            </div>
+
+            <div class="video-section">
+                <h3>🎥 Assista ao Vídeo do Cliente</h3>
+                <p>Antes de iniciar sua apresentação, você deve assistir ao vídeo onde o cliente expõe suas dores e necessidades:</p>
+                <a href="https://share.vidyard.com/watch/gJyHHmaRC9TeZ561PMLvSD?" target="_blank" class="video-link">
+                    <span class="video-icon">▶️</span>
+                    <span>Assistir Vídeo - Dores do Cliente</span>
+                </a>
+                <p style="margin-top: 1.5rem; font-size: 0.95rem; opacity: 0.85;">
+                    ⏱️ Você terá tempo para assistir e tomar notas antes de começar sua apresentação
+                </p>
+            </div>
+
+            <div class="scenario-box">
+                <h3>📄 Contexto</h3>
+                <div class="scenario-content">
+                    Você é o <strong>Coordenador Comercial</strong> apresentando a HupData para um potencial cliente.
+
+                    <strong>O cliente relatou as seguintes dores:</strong>
+                    <ul>
+                        <li>Processos manuais e repetitivos na área de dados</li>
+                        <li>Retrabalho constante (40% do tempo da equipe)</li>
+                        <li>Falta de governança e rastreabilidade</li>
+                        <li>Lentidão na entrega de relatórios gerenciais</li>
+                        <li>Dificuldade em escalar a operação</li>
+                    </ul>
+
+                    <div style="background: #fef3c7; padding: 1rem; border-radius: 6px; margin-top: 1rem; border-left: 3px solid #f59e0b;">
+                        <strong style="color: #92400e;">⚠️ Importante:</strong> Você deve apresentar as soluções HupData (MDA + KNIME Business Hub) de forma consultiva, conectando-as às dores específicas do cliente.
+                    </div>
+                </div>
+            </div>
+
+            <div class="task-list">
+                <h4>✅ Estrutura da sua apresentação (20 minutos):</h4>
+                <ol>
+                    <li>
+                        <strong>Diagnóstico (3 minutos):</strong>
+                        <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                            <li>Resuma as dores e o impacto no negócio</li>
+                            <li>Faça 2-3 perguntas qualificadoras</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Apresentação da solução (12 minutos):</strong>
+                        <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                            <li>Quem é a HupData</li>
+                            <li>Como MDA + KNIME Business Hub resolvem os problemas</li>
+                            <li>Benefícios práticos e tangíveis</li>
+                            <li>Resultados esperados (quantifique quando possível)</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Próximos passos (5 minutos):</strong>
+                        <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                            <li>Proposta clara de encaminhamento</li>
+                            <li>Timeline realista</li>
+                            <li>Chamada para ação</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="tip-box">
+                <h4>💡 Dicas para o Pitch</h4>
+                <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                    <li><strong>Conecte solução às dores</strong> - Não fale de features, fale de como resolve os problemas</li>
+                    <li><strong>Use linguagem de negócio</strong> - Evite jargões técnicos excessivos</li>
+                    <li><strong>Quantifique impactos</strong> - "Redução de 40-70% no tempo operacional" é melhor que "melhora a eficiência"</li>
+                    <li><strong>Feche com ação</strong> - Deixe claro qual é o próximo passo</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- DICAS FINAIS -->
+        <div class="intro-card" style="border-left-color: var(--success);">
+            <h2 style="color: var(--success);">✨ Dicas Gerais para Todo o Role Play</h2>
+            <div class="key-points">
+                <div class="key-point" style="border-left-color: var(--success);">
+                    <div class="key-point-title">Seja específico</div>
+                    <p>Evite respostas genéricas. Use números, nomes, prazos concretos.</p>
+                </div>
+                <div class="key-point" style="border-left-color: var(--success);">
+                    <div class="key-point-title">Tome decisões</div>
+                    <p>Coordenadores decidem, não apenas recomendam. Assuma o papel.</p>
+                </div>
+                <div class="key-point" style="border-left-color: var(--success);">
+                    <div class="key-point-title">Demonstre urgência</div>
+                    <p>Mas sem gerar caos. Equilíbrio entre velocidade e organização.</p>
+                </div>
+                <div class="key-point" style="border-left-color: var(--success);">
+                    <div class="key-point-title">Faça perguntas</div>
+                    <p>Bons líderes entendem antes de agir. Diagnóstico é fundamental.</p>
+                </div>
+                <div class="key-point" style="border-left-color: var(--success);">
+                    <div class="key-point-title">Gerencie o tempo</div>
+                    <p>Respeite os limites de cada bloco. Planejamento de tempo também é avaliado.</p>
+                </div>
+                <div class="key-point" style="border-left-color: var(--success);">
+                    <div class="key-point-title">Seja você mesmo</div>
+                    <p>Mostre seu estilo de liderança autêntico. Não existe resposta "decorada" perfeita.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p style="font-size: 1.1rem; margin-bottom: 1rem;">🎯 <strong>Boa sorte!</strong></p>
+        <p>© HupData - Role Play Coordenador Comercial</p>
+        <p style="margin-top: 0.5rem; font-size: 0.875rem;">Lembre-se: este é um processo de mão dupla. Também queremos que você conheça nossa cultura!</p>
+    </div>
+</body>
+</html>
