@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Role Play - Coordenador Comercial | Guia do Entrevistador</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1e3a5f;
+            --secondary: #2d5986;
+            --accent: #f97316;
+            --success: #10b981;
+            --warning: #fbbf24;
+            --danger: #ef4444;
+            --bg: #f8fafc;
+            --surface: #ffffff;
+            --text: #1e293b;
+            --text-light: #64748b;
+            --border: #e2e8f0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 3rem 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .header-subtitle {
+            font-size: 1.125rem;
+            opacity: 0.9;
+            font-weight: 500;
+        }
+
+        .header-meta {
+            display: flex;
+            gap: 2rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255,255,255,0.1);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+        }
+
+        .meta-icon {
+            font-size: 1.25rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .nav-quick {
+            background: var(--surface);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            border: 1px solid var(--border);
+        }
+
+        .nav-quick h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1rem;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-weight: 600;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-link {
+            background: var(--bg);
+            padding: 0.75rem 1.25rem;
+            border-radius: 8px;
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 600;
+            transition: all 0.2s;
+            border: 2px solid transparent;
+        }
+
+        .nav-link:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(30, 58, 95, 0.2);
+        }
+
+        .block {
+            background: var(--surface);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            border: 1px solid var(--border);
+            scroll-margin-top: 20px;
+        }
+
+        .block-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 3px solid var(--primary);
+        }
+
+        .block-number {
+            background: var(--primary);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .block-title {
+            flex: 1;
+        }
+
+        .block-title h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .block-title .duration {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .objective-badge {
+            background: linear-gradient(135deg, var(--accent) 0%, #fb923c 100%);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            display: inline-block;
+        }
+
+        .scenario-box {
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            border-left: 4px solid var(--primary);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+
+        .scenario-box h4 {
+            color: var(--primary);
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .scenario-box pre {
+            background: white;
+            padding: 1.25rem;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            white-space: pre-wrap;
+            border: 1px solid rgba(30, 58, 95, 0.1);
+        }
+
+        .checklist {
+            background: #f0fdf4;
+            border-left: 4px solid var(--success);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+
+        .checklist h4 {
+            color: var(--success);
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .checklist ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .checklist li {
+            padding: 0.5rem 0;
+            padding-left: 1.75rem;
+            position: relative;
+        }
+
+        .checklist li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--success);
+            font-weight: bold;
+            font-size: 1.25rem;
+        }
+
+        .alert-box {
+            background: #fef2f2;
+            border-left: 4px solid var(--danger);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+
+        .alert-box h4 {
+            color: var(--danger);
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .script-section {
+            background: #fefce8;
+            border-left: 4px solid var(--warning);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+
+        .script-section h4 {
+            color: #92400e;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .script-section blockquote {
+            background: white;
+            padding: 1.25rem;
+            border-radius: 6px;
+            border-left: 3px solid var(--warning);
+            font-style: italic;
+            margin: 1rem 0;
+            line-height: 1.8;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        thead {
+            background: var(--primary);
+            color: white;
+        }
+
+        th {
+            padding: 1rem;
+            text-align: left;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        td {
+            padding: 1rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        tbody tr:hover {
+            background: var(--bg);
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin: 0.25rem;
+        }
+
+        .tag-primary {
+            background: #dbeafe;
+            color: var(--primary);
+        }
+
+        .tag-success {
+            background: #d1fae5;
+            color: #065f46;
+        }
+
+        .tag-warning {
+            background: #fef3c7;
+            color: #92400e;
+        }
+
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .tip-card {
+            background: var(--bg);
+            padding: 1.25rem;
+            border-radius: 8px;
+            border-left: 3px solid var(--accent);
+        }
+
+        .tip-card strong {
+            color: var(--primary);
+            display: block;
+            margin-bottom: 0.5rem;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .footer {
+            background: var(--surface);
+            border-top: 1px solid var(--border);
+            padding: 2rem;
+            margin-top: 3rem;
+            text-align: center;
+            color: var(--text-light);
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+            .header {
+                background: var(--primary);
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .block {
+                page-break-inside: avoid;
+                box-shadow: none;
+                border: 1px solid #ddd;
+            }
+        }
+
+        .video-section {
+            background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 1.5rem 0;
+            color: white;
+        }
+
+        .video-section h4 {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .video-link {
+            background: white;
+            color: var(--primary);
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-weight: 600;
+            transition: all 0.2s;
+            margin-top: 1rem;
+        }
+
+        .video-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <h1>🎯 Role Play - Coordenador Comercial</h1>
+            <p class="header-subtitle">Guia Completo para Entrevistadores | HupData</p>
+            <div class="header-meta">
+                <div class="meta-item">
+                    <span class="meta-icon">⏱️</span>
+                    <span>Duração: 60-70 min</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-icon">📋</span>
+                    <span>3 Blocos de Avaliação</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-icon">🎭</span>
+                    <span>2 Simulações de Coordenação</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="nav-quick">
+            <h3>Navegação Rápida</h3>
+            <div class="nav-links">
+                <a href="#bloco1" class="nav-link">Bloco 1: Planejamento</a>
+                <a href="#bloco2" class="nav-link">Bloco 2: Coordenação</a>
+                <a href="#bloco3" class="nav-link">Bloco 3: Pitch</a>
+                <a href="#scorecard" class="nav-link">Scorecard</a>
+                <a href="#dicas" class="nav-link">Dicas de Aplicação</a>
+            </div>
+        </div>
+
+        <!-- BLOCO 1 -->
+        <div class="block" id="bloco1">
+            <div class="block-header">
+                <div class="block-number">1</div>
+                <div class="block-title">
+                    <h2>Planejamento Estratégico</h2>
+                    <p class="duration">⏱️ Duração: 15 minutos</p>
+                </div>
+            </div>
+
+            <div class="objective-badge">
+                🎯 Objetivo: Avaliar capacidade de organização, priorização e execução
+            </div>
+
+            <div class="scenario-box">
+                <h4>📄 Cenário para entregar ao candidato:</h4>
+                <pre>Você assumiu como Coordenador Comercial hoje, segunda-feira às 9h.
+
+<strong>SITUAÇÃO ATUAL:</strong>
+• Time: 2 SDRs, 1 Inside Sales, 1 Analista Júnior
+• 80 leads qualificados nos últimos 10 dias (não trabalhados)
+• Time desorganizado, sem priorização clara
+• CRM incompleto, follow-ups atrasados
+• Meta do mês: R$ 120.000 em novos contratos
+
+<strong>VOCÊ TEM 7 DIAS PARA ORGANIZAR TUDO.</strong></pre>
+            </div>
+
+            <div class="checklist">
+                <h4>✅ O candidato deve apresentar (10 minutos):</h4>
+                <ul>
+                    <li><strong>Plano dos primeiros 7 dias:</strong> Como organiza o time? Quais rituais/reuniões implementa? Como prioriza os 80 leads? Como elimina impedimentos?</li>
+                    <li><strong>Métricas e controle:</strong> Quais indicadores acompanha diariamente? Quais sinais de alerta? Como garante previsibilidade?</li>
+                    <li><strong>Comunicação com o time:</strong> Como transmite urgência sem gerar caos? Como garante foco e execução?</li>
+                </ul>
+            </div>
+
+            <h3 style="margin-top: 2rem; color: var(--primary); font-family: 'Outfit', sans-serif;">🔍 Competências Avaliadas:</h3>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1rem 0;">
+                <span class="tag tag-primary">Planejamento</span>
+                <span class="tag tag-primary">Clareza de priorização</span>
+                <span class="tag tag-primary">Organização</span>
+                <span class="tag tag-primary">Senso de urgência</span>
+                <span class="tag tag-primary">Pragmatismo</span>
+                <span class="tag tag-primary">Comunicação clara</span>
+            </div>
+
+            <div class="alert-box">
+                <h4>🚩 Sinais de Alerta (Red Flags):</h4>
+                <ul style="list-style: none; padding-left: 0;">
+                    <li style="padding: 0.5rem 0;">❌ Respostas genéricas ou teóricas demais</li>
+                    <li style="padding: 0.5rem 0;">❌ Não define prazos nem responsáveis</li>
+                    <li style="padding: 0.5rem 0;">❌ Plano sem métricas concretas</li>
+                    <li style="padding: 0.5rem 0;">❌ Não antecipa impedimentos</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- BLOCO 2 -->
+        <div class="block" id="bloco2">
+            <div class="block-header">
+                <div class="block-number">2</div>
+                <div class="block-title">
+                    <h2>Coordenação de Time</h2>
+                    <p class="duration">⏱️ Duração: 25 minutos</p>
+                </div>
+            </div>
+
+            <div class="objective-badge">
+                🎯 Objetivo: Avaliar liderança, diagnóstico rápido e remoção de impedimentos
+            </div>
+
+            <!-- SIMULAÇÃO A -->
+            <h3 style="color: var(--primary); font-family: 'Outfit', sans-serif; margin-top: 2rem;">🎭 Simulação A - SDR Perdido (12 min)</h3>
+
+            <div class="script-section">
+                <h4>🎬 Script para o Entrevistador (Você interpreta o SDR):</h4>
+                <blockquote>
+                    "Coordenador, preciso de ajuda urgente.<br><br>
+                    Tenho 20 leads para trabalhar, mas não sei por onde começar.<br>
+                    Uma conta grande pediu proposta, mas faltam informações internas.<br>
+                    O cliente X está pressionando por urgência.<br>
+                    Estou travado e com medo de atrasar tudo."
+                </blockquote>
+            </div>
+
+            <div class="checklist">
+                <h4>✅ O candidato precisa demonstrar:</h4>
+                <ul>
+                    <li>Diagnóstico rápido da situação</li>
+                    <li>Priorização clara com critérios definidos</li>
+                    <li>Remoção de impedimentos (buscar informações, destravar processos)</li>
+                    <li>Plano de ação objetivo e executável</li>
+                    <li>Transferência de segurança ao SDR</li>
+                    <li>Comunicação simples e direta</li>
+                </ul>
+            </div>
+
+            <div class="alert-box">
+                <h4>❗ Pergunta Final Obrigatória (faça ao candidato):</h4>
+                <p style="font-weight: 600; font-size: 1.1rem; margin-top: 1rem;">
+                    "Qual é o seu plano para as próximas 24 horas? Me dê 3 ações concretas."
+                </p>
+                <p style="margin-top: 1rem; color: var(--text-light);">
+                    <strong>Observe:</strong> O candidato deve ser específico, não genérico. Ações devem ter responsáveis e prazos.
+                </p>
+            </div>
+
+            <!-- SIMULAÇÃO B -->
+            <h3 style="color: var(--primary); font-family: 'Outfit', sans-serif; margin-top: 3rem;">🎭 Simulação B - Executivo de Contas (13 min)</h3>
+
+            <div class="script-section">
+                <h4>🎬 Script para o Entrevistador (Você interpreta o AE):</h4>
+                <blockquote>
+                    "Coordenador, preciso de direcionamento.<br><br>
+                    Tenho um deal de R$ 80.000/ano avançando, mas com problemas:<br>
+                    1. O decisor sumiu há 2 semanas<br>
+                    2. Concorrente está agressivo<br>
+                    3. Nosso time técnico atrasou o escopo<br>
+                    4. Minha previsão do mês depende desse deal<br><br>
+                    Vale continuar investindo tempo nisso ou foco em outros?"
+                </blockquote>
+            </div>
+
+            <div class="checklist">
+                <h4>✅ O candidato deve demonstrar:</h4>
+                <ul>
+                    <li><strong>Fazer perguntas qualificadoras:</strong> Quem é o decisor real? Há champion interno? Qual a urgência real do cliente?</li>
+                    <li><strong>Avaliar viabilidade:</strong> Aplicar critérios de qualificação (BANT, MEDDIC, etc.)</li>
+                    <li><strong>Decidir:</strong> Continuar investindo ou realocar esforços?</li>
+                    <li><strong>Remover impedimentos:</strong> Destravar time técnico, buscar acesso ao decisor</li>
+                    <li><strong>Definir previsão realista:</strong> Esse deal entra ou não no mês?</li>
+                    <li><strong>Gestão de pipeline:</strong> Entender % real de fechamento</li>
+                </ul>
+            </div>
+
+            <div class="scenario-box">
+                <h4>🔍 Perguntas-Chave que um Bom Candidato Deve Fazer:</h4>
+                <ul style="padding-left: 1.5rem; margin-top: 1rem;">
+                    <li>"Quem é o decisor real? Você tem acesso direto?"</li>
+                    <li>"Qual foi o último compromisso firmado com o cliente?"</li>
+                    <li>"Esse cliente tem urgência real ou podemos perder timing?"</li>
+                    <li>"Temos um champion interno? Quem está vendendo por nós lá dentro?"</li>
+                    <li>"Qual é a objeção principal no momento?"</li>
+                    <li>"Quanto tempo você já investiu nesse deal? O retorno vale o esforço?"</li>
+                </ul>
+            </div>
+
+            <div class="alert-box">
+                <h4>❗ Pergunta Final Obrigatória (faça ao candidato):</h4>
+                <p style="font-weight: 600; font-size: 1.1rem; margin-top: 1rem;">
+                    "Em 5 frases: o que VOCÊ vai fazer e o que EU devo fazer nas próximas 48h?"
+                </p>
+                <p style="margin-top: 1rem; color: var(--text-light);">
+                    <strong>Observe:</strong> Candidato deve trazer ação concreta, controle do pipeline, liderança madura.
+                </p>
+            </div>
+
+            <h3 style="margin-top: 2rem; color: var(--primary); font-family: 'Outfit', sans-serif;">🔍 Competências Avaliadas no Bloco 2:</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Competência</th>
+                        <th>Simulação A (SDR)</th>
+                        <th>Simulação B (AE)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Diagnóstico rápido</strong></td>
+                        <td>✅</td>
+                        <td>✅</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Priorização</strong></td>
+                        <td>✅</td>
+                        <td>✅</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Comunicação assertiva</strong></td>
+                        <td>✅</td>
+                        <td>✅</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Remoção de impedimentos táticos</strong></td>
+                        <td>✅</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Remoção de impedimentos estratégicos</strong></td>
+                        <td>—</td>
+                        <td>✅</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Gestão de pipeline</strong></td>
+                        <td>—</td>
+                        <td>✅</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Previsibilidade e forecast</strong></td>
+                        <td>—</td>
+                        <td>✅</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Influência e liderança</strong></td>
+                        <td>⚪ Importante</td>
+                        <td>🔥 <strong>Principal</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Senso de urgência</strong></td>
+                        <td>🔥</td>
+                        <td>🔥</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- BLOCO 3 -->
+        <div class="block" id="bloco3">
+            <div class="block-header">
+                <div class="block-number">3</div>
+                <div class="block-title">
+                    <h2>Pitch Consultivo</h2>
+                    <p class="duration">⏱️ Duração: 20 minutos</p>
+                </div>
+            </div>
+
+            <div class="objective-badge">
+                🎯 Objetivo: Avaliar entendimento de demanda e proposta de solução
+            </div>
+
+            <div class="video-section">
+                <h4>🎥 Vídeo das Dores do Cliente</h4>
+                <p style="margin-bottom: 1rem;">Antes de iniciar este bloco, o candidato deve assistir ao vídeo com as dores do cliente:</p>
+                <a href="https://share.vidyard.com/watch/gJyHHmaRC9TeZ561PMLvSD?" target="_blank" class="video-link">
+                    <span>▶️</span>
+                    <span>Assistir Vídeo - Dores do Cliente</span>
+                </a>
+                <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
+                    💡 O candidato terá tempo para assistir antes da apresentação
+                </p>
+            </div>
+
+            <div class="scenario-box">
+                <h4>📄 Cenário:</h4>
+                <pre>Você tem 20 minutos para apresentar a HupData para um cliente 
+que relatou os seguintes problemas:
+
+<strong>DORES DO CLIENTE (conforme vídeo):</strong>
+• Processos manuais e repetitivos na área de dados
+• Retrabalho constante (40% do tempo da equipe)
+• Falta de governança e rastreabilidade
+• Lentidão na entrega de relatórios gerenciais
+• Dificuldade em escalar operação</pre>
+            </div>
+
+            <div class="checklist">
+                <h4>✅ O candidato deve cobrir:</h4>
+                <ul>
+                    <li><strong>1. Diagnóstico (3 min):</strong> Resumir as dores e impacto no negócio + Fazer 2-3 perguntas qualificadoras</li>
+                    <li><strong>2. Apresentação da solução (12 min):</strong> Quem é a HupData + Como MDA + KNIME Business Hub resolvem + Benefícios práticos e tangíveis + Resultados esperados (quantificar quando possível)</li>
+                    <li><strong>3. Próximos passos (5 min):</strong> Proposta clara de encaminhamento + Timeline realista + Chamada para ação</li>
+                </ul>
+            </div>
+
+            <div class="scenario-box">
+                <h4>💡 Exemplo de Discurso Esperado:</h4>
+                <blockquote style="background: white; padding: 1.5rem; border-radius: 8px; border-left: 3px solid var(--primary); font-style: normal; line-height: 1.8;">
+                    "Com base no que você trouxe — retrabalho, processos manuais e lentidão — nossa proposta envolve dois pilares principais:<br><br>
+                    
+                    <strong>1) MDA — Modern Data Automation</strong><br>
+                    • Automação dos fluxos manuais<br>
+                    • Padronização das rotinas<br>
+                    • Redução do retrabalho<br>
+                    • Segurança e rastreabilidade<br><br>
+                    
+                    <strong>2) KNIME Business Hub</strong><br>
+                    • Centralização dos workflows<br>
+                    • Governança<br>
+                    • Escalabilidade<br>
+                    • Execução automática<br><br>
+                    
+                    O impacto típico para nossos clientes é <strong>reduzir 40–70% do tempo operacional</strong>, aumentando qualidade e escalabilidade."
+                </blockquote>
+            </div>
+
+            <h3 style="margin-top: 2rem; color: var(--primary); font-family: 'Outfit', sans-serif;">🔍 Competências Avaliadas:</h3>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1rem 0;">
+                <span class="tag tag-primary">Domínio comercial</span>
+                <span class="tag tag-primary">Investigação consultiva</span>
+                <span class="tag tag-primary">Raciocínio de diagnóstico</span>
+                <span class="tag tag-primary">Proposta de valor</span>
+                <span class="tag tag-primary">Postura e argumentação</span>
+                <span class="tag tag-primary">Comunicação clara</span>
+                <span class="tag tag-primary">Fechamento</span>
+            </div>
+        </div>
+
+        <!-- SCORECARD -->
+        <div class="block" id="scorecard">
+            <div class="block-header">
+                <div class="block-number">📊</div>
+                <div class="block-title">
+                    <h2>Scorecard de Avaliação</h2>
+                    <p class="duration">Aprovação: ≥ 3,5 pontos</p>
+                </div>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 40%;">Competência</th>
+                        <th style="width: 15%;">Peso</th>
+                        <th style="width: 20%;">Nota (0-5)</th>
+                        <th style="width: 25%;">Pontos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Planejamento e organização</strong><br><small style="color: var(--text-light);">Clareza de método, coerência, estrutura</small></td>
+                        <td>20%</td>
+                        <td style="background: #f9fafb;">_____</td>
+                        <td style="background: #f9fafb;">_____</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Liderança e direcionamento</strong><br><small style="color: var(--text-light);">Capacidade de coordenar, apoiar e cobrar</small></td>
+                        <td>20%</td>
+                        <td style="background: #f9fafb;">_____</td>
+                        <td style="background: #f9fafb;">_____</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Execução e follow-through</strong><br><small style="color: var(--text-light);">Transforma plano em ação real</small></td>
+                        <td>15%</td>
+                        <td style="background: #f9fafb;">_____</td>
+                        <td style="background: #f9fafb;">_____</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Diagnóstico e solução de problemas</strong><br><small style="color: var(--text-light);">Remove impedimentos corretamente</small></td>
+                        <td>15%</td>
+                        <td style="background: #f9fafb;">_____</td>
+                        <td style="background: #f9fafb;">_____</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Senso de urgência</strong><br><small style="color: var(--text-light);">Proatividade, velocidade, determinação</small></td>
+                        <td>10%</td>
+                        <td style="background: #f9fafb;">_____</td>
+                        <td style="background: #f9fafb;">_____</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Comunicação</strong><br><small style="color: var(--text-light);">Clareza, concisão, segurança</small></td>
+                        <td>10%</td>
+                        <td style="background: #f9fafb;">_____</td>
+                        <td style="background: #f9fafb;">_____</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Proposta consultiva</strong><br><small style="color: var(--text-light);">Entende demanda e propõe solução</small></td>
+                        <td>10%</td>
+                        <td style="background: #f9fafb;">_____</td>
+                        <td style="background: #f9fafb;">_____</td>
+                    </tr>
+                    <tr style="background: var(--primary); color: white; font-weight: bold;">
+                        <td>TOTAL</td>
+                        <td>100%</td>
+                        <td></td>
+                        <td>_____ / 5,0</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div style="background: #f0fdf4; padding: 1.5rem; border-radius: 8px; margin-top: 1.5rem; border-left: 4px solid var(--success);">
+                <strong style="color: var(--success);">📐 Fórmula de Cálculo:</strong><br>
+                <p style="margin-top: 0.5rem;">Nota Final = Σ (Nota da Competência × Peso)</p>
+                <p style="margin-top: 0.5rem; color: var(--text-light);">Exemplo: (4 × 0.20) + (3 × 0.20) + (5 × 0.15) + ... = 3.85 pontos</p>
+            </div>
+        </div>
+
+        <!-- CHECKLIST -->
+        <div class="block">
+            <h2 style="color: var(--primary); font-family: 'Outfit', sans-serif; margin-bottom: 1.5rem;">✅ Checklist de Sinais Positivos</h2>
+            <p style="margin-bottom: 1.5rem; color: var(--text-light);">Marque quantos o candidato demonstra durante o role play:</p>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+                <div>
+                    <h4 style="color: var(--primary); margin-bottom: 1rem;">📋 Planejamento</h4>
+                    <div class="checklist" style="background: white; border: 1px solid var(--border);">
+                        <ul>
+                            <li>Define prioridades claras</li>
+                            <li>Estabelece rituais e rotinas</li>
+                            <li>Cria métricas de acompanhamento</li>
+                            <li>Antecipa impedimentos</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 style="color: var(--primary); margin-bottom: 1rem;">👥 Liderança</h4>
+                    <div class="checklist" style="background: white; border: 1px solid var(--border);">
+                        <ul>
+                            <li>Faz perguntas antes de dar soluções</li>
+                            <li>Transfere segurança ao time</li>
+                            <li>Dá direcionamento claro (não genérico)</li>
+                            <li>Toma decisões (não apenas recomenda)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 style="color: var(--primary); margin-bottom: 1rem;">⚡ Execução</h4>
+                    <div class="checklist" style="background: white; border: 1px solid var(--border);">
+                        <ul>
+                            <li>Define prazos específicos</li>
+                            <li>Nomeia responsáveis</li>
+                            <li>Estabelece próximos passos concretos</li>
+                            <li>Cria controle/follow-up</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 style="color: var(--primary); margin-bottom: 1rem;">🔥 Senso de Urgência</h4>
+                    <div class="checklist" style="background: white; border: 1px solid var(--border);">
+                        <ul>
+                            <li>Age com rapidez no diagnóstico</li>
+                            <li>Elimina impedimentos ativamente</li>
+                            <li>Não empurra problemas para depois</li>
+                            <li>Foca no que gera resultado imediato</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 style="color: var(--primary); margin-bottom: 1rem;">💡 Consultivo</h4>
+                    <div class="checklist" style="background: white; border: 1px solid var(--border);">
+                        <ul>
+                            <li>Conecta dor do cliente à solução</li>
+                            <li>Quantifica impactos</li>
+                            <li>Fala em linguagem de negócio</li>
+                            <li>Fecha com próximo passo claro</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- DICAS -->
+        <div class="block" id="dicas">
+            <h2 style="color: var(--primary); font-family: 'Outfit', sans-serif; margin-bottom: 1.5rem;">💡 Dicas para Aplicação</h2>
+
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <strong>1. Grave ou tenha observador</strong>
+                    É difícil avaliar e interagir ao mesmo tempo. Considere gravar (com permissão) ou ter um segundo avaliador.
+                </div>
+
+                <div class="tip-card">
+                    <strong>2. Cronometre rigorosamente</strong>
+                    Respeite os tempos estabelecidos - a gestão do tempo é parte da avaliação.
+                </div>
+
+                <div class="tip-card">
+                    <strong>3. Seja consistente</strong>
+                    Use os mesmos scripts e critérios com todos os candidatos para comparação justa.
+                </div>
+
+                <div class="tip-card">
+                    <strong>4. Não ajude demais</strong>
+                    Deixe o candidato navegar sozinho pelos desafios. Intervenha apenas se necessário.
+                </div>
+
+                <div class="tip-card">
+                    <strong>5. Anote comportamentos específicos</strong>
+                    Exemplos concretos valem mais que impressões gerais. "Definiu 3 prioridades com prazos" > "foi organizado".
+                </div>
+
+                <div class="tip-card">
+                    <strong>6. Observe linguagem corporal</strong>
+                    Postura, contato visual e confiança também contam na liderança.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>© HupData - Role Play Coordenador Comercial | Versão 1.0</p>
+        <p style="margin-top: 0.5rem; font-size: 0.875rem;">Documento confidencial - Uso exclusivo do processo seletivo</p>
+    </div>
+</body>
+</html>
